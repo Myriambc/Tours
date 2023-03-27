@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    padding-bottom: 0px;
+   
+}
+.hr{position: absolute;
+    width: 98px;
+    border: 2px solid rgb(39, 180, 51);
+
+  
+    
+}
+
+h2{font-size: 42px;font-weight: 400;
+margin-bottom: 80px;
+}
+body{
+    background-color: beige;
+}
