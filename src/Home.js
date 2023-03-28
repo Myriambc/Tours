@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Tour from "./Tour";
+import Notours from "./Notours";
 
 const Home = () => {
   const [tours, setTours] = useState([
@@ -48,9 +49,12 @@ const Home = () => {
   //   const newDesc = tours.filter((tour) => );
   //   setTours(newDesc);
   // };
-
+  const isEmpty = tours.length === 0;
   return (
-    <Tour tours={tours} handleDelete={handleDelete} /*shorten={shorten}*/ />
+    <div className="Home">
+      <Tour tours={tours} handleDelete={handleDelete} /*shorten={shorten}*/ />
+      {isEmpty && <Notours />}
+    </div>
   );
 };
 

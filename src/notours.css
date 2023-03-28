@@ -1,0 +1,19 @@
+.mother{
+    display: flex;
+
+    flex-direction: column;
+   
+
+}
+h1{
+    text-align: center;
+}
+.refresh{
+    margin-top: 10px;
+position: relative;
+    left: 47%;
+    background-color:rgb(39, 180, 51) ;
+    color:white;
+    padding: 5px;
+    width:80px;
+}
