@@ -10,10 +10,16 @@ h1{
 }
 .refresh{
     margin-top: 10px;
-position: relative;
+    border-radius: 2px;
+    border:1px solid rgb(39, 180, 51) ;
+    position: relative;
     left: 47%;
     background-color:rgb(39, 180, 51) ;
     color:white;
     padding: 5px;
     width:80px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
 }

@@ -1,9 +1,11 @@
 import "./notours.css";
-const Notours = () => {
+const Notours = ({ loading }) => {
   return (
     <div className="mother">
       <h1>No Tours Left</h1>
-      <button className="refresh">Refresh</button>
+      <button className="refresh" onClick={() => loading()}>
+        Refresh
+      </button>
     </div>
   );
 };

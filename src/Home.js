@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Tour from "./Tour";
 import Notours from "./Notours";
+import Loading from "./Loading";
 
 const Home = () => {
+  const [load, setLoad] = useState(true);
   const [tours, setTours] = useState([
     {
       price: "$2,095",
@@ -41,6 +43,10 @@ const Home = () => {
     },
   ]);
 
+  const loading = () => {
+    console.log("hello");
+    setLoad(false);
+  };
   const handleDelete = (id) => {
     const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours);
@@ -52,8 +58,10 @@ const Home = () => {
   const isEmpty = tours.length === 0;
   return (
     <div className="Home">
-      <Tour tours={tours} handleDelete={handleDelete} /*shorten={shorten}*/ />
-      {isEmpty && <Notours />}
+      {load && (
+        <Tour tours={tours} handleDelete={handleDelete} /*shorten={shorten}*/ />
+      )}
+      {isEmpty && <Notours loading={loading} />}
     </div>
   );
 };
